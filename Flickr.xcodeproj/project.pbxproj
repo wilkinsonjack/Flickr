@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0416A5C8205854310052A58F /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416A5C7205854310052A58F /* PhotoCollectionViewCell.swift */; };
+		0416A5CB20585C620052A58F /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0416A5CA20585C620052A58F /* SDWebImage.framework */; };
+		0416A5CF2058632A0052A58F /* RoundedUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0416A5CE2058632A0052A58F /* RoundedUIImageView.swift */; };
 		0441130C205847EA008889CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441130B205847EA008889CD /* AppDelegate.swift */; };
 		0441130E205847EA008889CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441130D205847EA008889CD /* ViewController.swift */; };
 		04411311205847EA008889CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441130F205847EA008889CD /* Main.storyboard */; };
@@ -18,6 +21,7 @@
 		04411336205849A4008889CD /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411335205849A4008889CD /* PhotoService.swift */; };
 		04411339205849DE008889CD /* PhotoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411338205849DE008889CD /* PhotoServiceTests.swift */; };
 		0441133B20584A21008889CD /* PhotoResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 0441133A20584A21008889CD /* PhotoResponseSuccess.json */; };
+		0441133E20585282008889CD /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441133D20585282008889CD /* PhotoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0416A5C7205854310052A58F /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		0416A5CA20585C620052A58F /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDWebImage.framework; path = Carthage/Build/iOS/SDWebImage.framework; sourceTree = "<group>"; };
+		0416A5CE2058632A0052A58F /* RoundedUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIImageView.swift; sourceTree = "<group>"; };
 		04411308205847EA008889CD /* Flickr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flickr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0441130B205847EA008889CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0441130D205847EA008889CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +53,7 @@
 		04411335205849A4008889CD /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		04411338205849DE008889CD /* PhotoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceTests.swift; sourceTree = "<group>"; };
 		0441133A20584A21008889CD /* PhotoResponseSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhotoResponseSuccess.json; sourceTree = "<group>"; };
+		0441133D20585282008889CD /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0416A5CB20585C620052A58F /* SDWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,12 +75,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0416A5C6205854210052A58F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0416A5C7205854310052A58F /* PhotoCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0416A5C920585C610052A58F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0416A5CA20585C620052A58F /* SDWebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0416A5CD205862F30052A58F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0416A5CE2058632A0052A58F /* RoundedUIImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		044112FF205847EA008889CD = {
 			isa = PBXGroup;
 			children = (
 				0441130A205847EA008889CD /* Flickr */,
 				0441131F205847EA008889CD /* FlickrTests */,
 				04411309205847EA008889CD /* Products */,
+				0416A5C920585C610052A58F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -87,6 +121,7 @@
 		0441130A205847EA008889CD /* Flickr */ = {
 			isa = PBXGroup;
 			children = (
+				0416A5CD205862F30052A58F /* View */,
 				0441132F20584916008889CD /* Photo */,
 				0441132B205848E7008889CD /* Network */,
 				0441130B205847EA008889CD /* AppDelegate.swift */,
@@ -128,6 +163,8 @@
 		0441132F20584916008889CD /* Photo */ = {
 			isa = PBXGroup;
 			children = (
+				0416A5C6205854210052A58F /* View */,
+				0441133C2058516C008889CD /* Controller */,
 				0441133420584999008889CD /* Service */,
 				044113302058492C008889CD /* Model */,
 			);
@@ -167,6 +204,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		0441133C2058516C008889CD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0441133D20585282008889CD /* PhotoCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +222,7 @@
 				04411304205847EA008889CD /* Sources */,
 				04411305205847EA008889CD /* Frameworks */,
 				04411306205847EA008889CD /* Resources */,
+				0416A5CC20585C700052A58F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -266,14 +312,35 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0416A5CC20585C700052A58F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SDWebImage.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		04411304205847EA008889CD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0416A5CF2058632A0052A58F /* RoundedUIImageView.swift in Sources */,
 				04411336205849A4008889CD /* PhotoService.swift in Sources */,
+				0441133E20585282008889CD /* PhotoCollectionViewController.swift in Sources */,
 				0441133220584947008889CD /* PhotoContainer.swift in Sources */,
 				0441132D205848F0008889CD /* NetworkSession.swift in Sources */,
+				0416A5C8205854310052A58F /* PhotoCollectionViewCell.swift in Sources */,
 				0441130E205847EA008889CD /* ViewController.swift in Sources */,
 				0441130C205847EA008889CD /* AppDelegate.swift in Sources */,
 			);
@@ -431,6 +498,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C2NRDVA92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Flickr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jackwilkinson.Flickr;
@@ -446,6 +517,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7C2NRDVA92;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Flickr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jackwilkinson.Flickr;
