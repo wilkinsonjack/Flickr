@@ -58,4 +58,12 @@ struct PhotoContainer: Codable {
     }
 }
 
+extension PhotoContainer.Item {
+    var username: String {
+        let pattern = "\"([^\"]+)\""
+
+        return author.firstMatch(from: pattern) ?? "A Flickr user"
+    }
+}
+
 

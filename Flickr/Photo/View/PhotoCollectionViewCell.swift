@@ -9,7 +9,16 @@
 import UIKit
 import SDWebImage
 
+protocol PhotoCollectionViewCellDelegate: class {
+    func shareButtonDidTap(_ cell: PhotoCollectionViewCell)
+}
+
 class PhotoCollectionViewCell: UICollectionViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var photoImageView: UIImageView!
+
+    weak var delegate: PhotoCollectionViewCellDelegate?
+
     var photo: PhotoContainer.Item? {
         didSet {
             guard let photo = photo
@@ -20,6 +29,7 @@ class PhotoCollectionViewCell: UICollectionViewCell {
         }
     }
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBAction func shareTapped(_ sender: UIButton) {
+        delegate?.shareButtonDidTap(self)
+    }
 }

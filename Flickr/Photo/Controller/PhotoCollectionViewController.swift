@@ -75,6 +75,7 @@ class PhotoCollectionViewController: UICollectionViewController {
 
         let photo = photoContainer.items[indexPath.item]
         cell.photo = photo
+        cell.delegate = self
 
         return cell
     }
@@ -114,7 +115,6 @@ extension PhotoCollectionViewController: UICollectionViewDelegateFlowLayout {
         return itemSpacing
     }
 }
-
 
 private extension String {
     static let reuseIdentifier = "photoCell"

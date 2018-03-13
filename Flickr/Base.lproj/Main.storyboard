@@ -51,12 +51,26 @@
                                             <color key="textColor" red="0.97539923729630296" green="0.97539923729630296" blue="0.97539923729630296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-Qi-z76">
+                                            <rect key="frame" x="140" y="8" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="1ld-sV-hS8"/>
+                                                <constraint firstAttribute="width" constant="30" id="WF7-8f-Wbc"/>
+                                            </constraints>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" image="share"/>
+                                            <connections>
+                                                <action selector="shareTapped:" destination="Nd3-Ce-82A" eventType="touchUpInside" id="AGh-o7-r6l"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="Axn-Qi-z76" firstAttribute="top" secondItem="vZA-iV-kV7" secondAttribute="top" constant="8" id="0hw-tl-p0t"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="8H7-Y6-nsG" secondAttribute="bottom" constant="8" id="1Ze-Bv-hUQ"/>
                                     <constraint firstItem="vZA-iV-kV7" firstAttribute="top" secondItem="1GB-kw-GcL" secondAttribute="top" id="47J-E6-SmM"/>
                                     <constraint firstItem="1GB-kw-GcL" firstAttribute="bottom" secondItem="vZA-iV-kV7" secondAttribute="bottom" id="Qjc-bk-n4U"/>
+                                    <constraint firstItem="vZA-iV-kV7" firstAttribute="trailing" secondItem="Axn-Qi-z76" secondAttribute="trailing" constant="8" id="WF0-77-jXi"/>
                                     <constraint firstItem="vZA-iV-kV7" firstAttribute="leading" secondItem="1GB-kw-GcL" secondAttribute="leading" id="YgA-gc-xBd"/>
                                     <constraint firstItem="1GB-kw-GcL" firstAttribute="trailing" secondItem="vZA-iV-kV7" secondAttribute="trailing" id="dpk-cF-70w"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="8H7-Y6-nsG" secondAttribute="trailing" constant="8" id="olU-Tp-3jR"/>
@@ -102,4 +116,7 @@
             <point key="canvasLocation" x="112" y="71.964017991004496"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="share" width="50" height="50"/>
+    </resources>
 </document>
