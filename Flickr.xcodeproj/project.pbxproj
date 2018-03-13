@@ -13,6 +13,11 @@
 		04411313205847EA008889CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04411312205847EA008889CD /* Assets.xcassets */; };
 		04411316205847EA008889CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04411314205847EA008889CD /* LaunchScreen.storyboard */; };
 		04411321205847EA008889CD /* FlickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411320205847EA008889CD /* FlickrTests.swift */; };
+		0441132D205848F0008889CD /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441132C205848F0008889CD /* NetworkSession.swift */; };
+		0441133220584947008889CD /* PhotoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441133120584947008889CD /* PhotoContainer.swift */; };
+		04411336205849A4008889CD /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411335205849A4008889CD /* PhotoService.swift */; };
+		04411339205849DE008889CD /* PhotoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411338205849DE008889CD /* PhotoServiceTests.swift */; };
+		0441133B20584A21008889CD /* PhotoResponseSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 0441133A20584A21008889CD /* PhotoResponseSuccess.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +41,11 @@
 		0441131C205847EA008889CD /* FlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04411320205847EA008889CD /* FlickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrTests.swift; sourceTree = "<group>"; };
 		04411322205847EA008889CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0441132C205848F0008889CD /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		0441133120584947008889CD /* PhotoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainer.swift; sourceTree = "<group>"; };
+		04411335205849A4008889CD /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
+		04411338205849DE008889CD /* PhotoServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoServiceTests.swift; sourceTree = "<group>"; };
+		0441133A20584A21008889CD /* PhotoResponseSuccess.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PhotoResponseSuccess.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +87,8 @@
 		0441130A205847EA008889CD /* Flickr */ = {
 			isa = PBXGroup;
 			children = (
+				0441132F20584916008889CD /* Photo */,
+				0441132B205848E7008889CD /* Network */,
 				0441130B205847EA008889CD /* AppDelegate.swift */,
 				0441130D205847EA008889CD /* ViewController.swift */,
 				0441130F205847EA008889CD /* Main.storyboard */,
@@ -90,10 +102,69 @@
 		0441131F205847EA008889CD /* FlickrTests */ = {
 			isa = PBXGroup;
 			children = (
+				0441133320584989008889CD /* Photo */,
+				0441132E2058490A008889CD /* Network */,
 				04411320205847EA008889CD /* FlickrTests.swift */,
 				04411322205847EA008889CD /* Info.plist */,
 			);
 			path = FlickrTests;
+			sourceTree = "<group>";
+		};
+		0441132B205848E7008889CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0441132C205848F0008889CD /* NetworkSession.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0441132E2058490A008889CD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0441132F20584916008889CD /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				0441133420584999008889CD /* Service */,
+				044113302058492C008889CD /* Model */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		044113302058492C008889CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0441133120584947008889CD /* PhotoContainer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0441133320584989008889CD /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				04411337205849C0008889CD /* Service */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		0441133420584999008889CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				04411335205849A4008889CD /* PhotoService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		04411337205849C0008889CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0441133A20584A21008889CD /* PhotoResponseSuccess.json */,
+				04411338205849DE008889CD /* PhotoServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0441133B20584A21008889CD /* PhotoResponseSuccess.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +271,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04411336205849A4008889CD /* PhotoService.swift in Sources */,
+				0441133220584947008889CD /* PhotoContainer.swift in Sources */,
+				0441132D205848F0008889CD /* NetworkSession.swift in Sources */,
 				0441130E205847EA008889CD /* ViewController.swift in Sources */,
 				0441130C205847EA008889CD /* AppDelegate.swift in Sources */,
 			);
@@ -208,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04411339205849DE008889CD /* PhotoServiceTests.swift in Sources */,
 				04411321205847EA008889CD /* FlickrTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
