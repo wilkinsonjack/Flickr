@@ -8,6 +8,8 @@
 
 **Storyboards** Normally i would use a mixture between Storyboards/UINib and creating UI via code however for the purpose of this test I went full Interface Builder as it seems these days thats the way that Apple is heading.
 
+**SFSafariViewController** I chose to use `SFSafariViewController` to open the url for the photo as it allows the user have the benefits of Safari (such as Keychain and Reading List) whilst also being part of the app rather than opening a URL and leaving the app completely.
+
 **Layout** I would like to have just used size classes to determine how many columns I would have, but sadly the only regular width iPhones are the 6plus/7plus/8plus and even though the iPhone X certainly has enough room on landscape, using size classes alone would not produce the 2 column output I wanted. As a result I had to check `UIDevice.current.orientation`
 
 **No RXSwift** Despite the spec for the test allowing the use of RXSwift, this is not something I have had production experience with, and is something I am currently learning so I didnt see it fit that I would complete the test in something which may not be production quality.
@@ -18,5 +20,6 @@
 - Core Requirements
 - Share
 - Image caching (via SDWebImage)
+- Open in browser
 - Ordering by date taken or date published
 
