@@ -19,7 +19,6 @@
 		04411311205847EA008889CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0441130F205847EA008889CD /* Main.storyboard */; };
 		04411313205847EA008889CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04411312205847EA008889CD /* Assets.xcassets */; };
 		04411316205847EA008889CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04411314205847EA008889CD /* LaunchScreen.storyboard */; };
-		04411321205847EA008889CD /* FlickrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411320205847EA008889CD /* FlickrTests.swift */; };
 		0441132D205848F0008889CD /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441132C205848F0008889CD /* NetworkSession.swift */; };
 		0441133220584947008889CD /* PhotoContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441133120584947008889CD /* PhotoContainer.swift */; };
 		04411336205849A4008889CD /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04411335205849A4008889CD /* PhotoService.swift */; };
@@ -58,7 +57,6 @@
 		04411315205847EA008889CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04411317205847EA008889CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0441131C205847EA008889CD /* FlickrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04411320205847EA008889CD /* FlickrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrTests.swift; sourceTree = "<group>"; };
 		04411322205847EA008889CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0441132C205848F0008889CD /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		0441133120584947008889CD /* PhotoContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainer.swift; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 			children = (
 				0494AC5A20593330001E6DC1 /* Extensions */,
 				0441133320584989008889CD /* Photo */,
-				04411320205847EA008889CD /* FlickrTests.swift */,
 				04411322205847EA008889CD /* Info.plist */,
 			);
 			path = FlickrTests;
@@ -398,7 +395,6 @@
 				0494AC5C2059333F001E6DC1 /* DateFormatterTests.swift in Sources */,
 				04411339205849DE008889CD /* PhotoServiceTests.swift in Sources */,
 				0494AC6220593722001E6DC1 /* PhotoContainerTests.swift in Sources */,
-				04411321205847EA008889CD /* FlickrTests.swift in Sources */,
 				0416A5D9205884EA0052A58F /* PhotoContainerItemTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
