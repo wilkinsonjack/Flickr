@@ -16,7 +16,7 @@ struct PhotoContainer: Codable {
     let generator: String
     let items: [Item]
 
-    enum CodingKeys: String, CodingKey {
+    enum CodingKeys: CodingKey {
         case title
         case link
         case description
