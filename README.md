@@ -4,7 +4,7 @@
 **SDWebImage** I chose to use just the one third party library. The reason for this is it would've taken me a considerable amount of time to write an image caching library myself and would've taken time away from focussing on the requirements of the task. This library is one among others such as Kingfisher which I have used in the past and is one I am familiar with.
 
 ## Decisions
-**Carthage** I chose to use Carthage as I am a fan of using a decentralised non-intrusive method of bringing in third party tools.
+**Carthage** I chose to use Carthage as I am a fan of using a decentralised non-intrusive method of bringing in third party tools. I also decided to check in the `Carthage/Build` directory in order to prevent any issues where SDWebImage might change by some coincidence as well as if the reviewer does not have `Carthage` installed on their machine. Normally I would not do this as it would unnecessarily increase the repo size.
 
 **Storyboards** Normally i would use a mixture between Storyboards/UINib and creating UI via code however for the purpose of this test I went full Interface Builder as it seems these days thats the way that Apple is heading.
 
