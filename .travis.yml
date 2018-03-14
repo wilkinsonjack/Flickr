@@ -1,0 +1,4 @@
+language: objective-c
+osx_image: xcode9.2
+script:
+  - xcodebuild clean test -project Flickr.xcodeproj -scheme Flickr -destination "platform=iOS Simulator,name=iPhone 7,OS=11.2" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO ONLY_ACTIVE_ARCH=NO -quiet
