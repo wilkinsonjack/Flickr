@@ -43,7 +43,7 @@ class PhotoServiceTests: XCTestCase {
             case .success(let photoContainer):
                 XCTAssertEqual(photoContainer.title, "Uploads from everyone")
                 XCTAssertEqual(photoContainer.items.count, 20)
-                XCTAssertEqual(photoContainer.items[0].media.m, URL(string:"https://farm5.staticflickr.com/4776/25916467797_7905d135b1_m.jpg")!)
+                XCTAssertEqual(photoContainer.items[0].media.url, URL(string:"https://farm5.staticflickr.com/4776/25916467797_7905d135b1_m.jpg")!)
             case .failure(_): XCTFail("😎 PhotoService.fetch call should have succeeded with valid data")
             }
             expectation.fulfill()

@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -45,14 +44,31 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-Y6-nsG">
-                                            <rect key="frame" x="16" y="143" width="146" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.97539923729630296" green="0.97539923729630296" blue="0.97539923729630296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QTH-UV-Oec">
+                                            <rect key="frame" x="8" y="110.5" width="178" height="61.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-s8-7BC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="178" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.9753992373" green="0.9753992373" blue="0.9753992373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9hg-G8-F2J">
+                                                    <rect key="frame" x="0.0" y="20.5" width="178" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.9753992373" green="0.9753992373" blue="0.9753992373" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-Y6-nsG">
+                                                    <rect key="frame" x="0.0" y="41" width="178" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.97539923729630296" green="0.97539923729630296" blue="0.97539923729630296" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Axn-Qi-z76">
-                                            <rect key="frame" x="140" y="8" width="30" height="30"/>
+                                            <rect key="frame" x="178" y="8" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="1ld-sV-hS8"/>
                                                 <constraint firstAttribute="width" constant="30" id="WF7-8f-Wbc"/>
@@ -67,17 +83,19 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="Axn-Qi-z76" firstAttribute="top" secondItem="vZA-iV-kV7" secondAttribute="top" constant="8" id="0hw-tl-p0t"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="8H7-Y6-nsG" secondAttribute="bottom" constant="8" id="1Ze-Bv-hUQ"/>
                                     <constraint firstItem="vZA-iV-kV7" firstAttribute="top" secondItem="1GB-kw-GcL" secondAttribute="top" id="47J-E6-SmM"/>
+                                    <constraint firstItem="vZA-iV-kV7" firstAttribute="bottom" secondItem="QTH-UV-Oec" secondAttribute="bottom" constant="8" id="4LW-9Z-gcp"/>
+                                    <constraint firstItem="vZA-iV-kV7" firstAttribute="trailing" secondItem="QTH-UV-Oec" secondAttribute="trailing" constant="8" id="OWF-LI-FBR"/>
                                     <constraint firstItem="1GB-kw-GcL" firstAttribute="bottom" secondItem="vZA-iV-kV7" secondAttribute="bottom" id="Qjc-bk-n4U"/>
+                                    <constraint firstItem="QTH-UV-Oec" firstAttribute="leading" secondItem="vZA-iV-kV7" secondAttribute="leading" constant="8" id="UYT-KE-usd"/>
                                     <constraint firstItem="vZA-iV-kV7" firstAttribute="trailing" secondItem="Axn-Qi-z76" secondAttribute="trailing" constant="8" id="WF0-77-jXi"/>
                                     <constraint firstItem="vZA-iV-kV7" firstAttribute="leading" secondItem="1GB-kw-GcL" secondAttribute="leading" id="YgA-gc-xBd"/>
                                     <constraint firstItem="1GB-kw-GcL" firstAttribute="trailing" secondItem="vZA-iV-kV7" secondAttribute="trailing" id="dpk-cF-70w"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="8H7-Y6-nsG" secondAttribute="trailing" constant="8" id="olU-Tp-3jR"/>
-                                    <constraint firstItem="8H7-Y6-nsG" firstAttribute="leading" secondItem="Nd3-Ce-82A" secondAttribute="leadingMargin" constant="8" id="zIk-Yp-cpE"/>
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="1GB-kw-GcL"/>
                                 <connections>
+                                    <outlet property="datePublishedLabel" destination="Zel-s8-7BC" id="s0q-gn-YCo"/>
+                                    <outlet property="dateTakenLabel" destination="9hg-G8-F2J" id="LTQ-32-Utr"/>
                                     <outlet property="photoImageView" destination="vZA-iV-kV7" id="YJ0-t8-vQf"/>
                                     <outlet property="titleLabel" destination="8H7-Y6-nsG" id="e15-oA-ISO"/>
                                 </connections>

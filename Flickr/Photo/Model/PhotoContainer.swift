@@ -29,13 +29,18 @@ struct PhotoContainer: Codable {
         let title: String
         let link: URL
         let media: Media
-        let dateTaken: String
+        let dateTaken: Date
         let description: String
-        let published: String
+        let published: Date
         let author: String
         let authorID: String
         let tags: String
-        
+
+        var username: String {
+            let pattern = "\"([^\"]+)\""
+            return author.firstMatch(from: pattern) ?? "A Flickr user"
+        }
+
         enum CodingKeys: String, CodingKey {
             case title
             case link
@@ -48,22 +53,14 @@ struct PhotoContainer: Codable {
             case tags
         }
 
+
         struct Media: Codable {
-            let m: URL
+            let url: URL
 
             enum CodingKeys: String, CodingKey {
-                case m
+                case url = "m"
             }
         }
     }
 }
-
-extension PhotoContainer.Item {
-    var username: String {
-        let pattern = "\"([^\"]+)\""
-
-        return author.firstMatch(from: pattern) ?? "A Flickr user"
-    }
-}
-
 

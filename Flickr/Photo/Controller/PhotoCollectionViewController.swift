@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum PhotoSortType {
+    case dateTaken
+    case datePublished
+}
+
 class PhotoCollectionViewController: UICollectionViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 
@@ -23,13 +28,33 @@ class PhotoCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let barButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "sort"), style: .plain, target: self, action: #selector(filterTapped))
+        navigationItem.rightBarButtonItem = barButtonItem
+
         fetchPhotos()
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        
+
         collectionView?.collectionViewLayout.invalidateLayout()
+    }
+
+    // MARL: Filtering
+
+    @objc func filterTapped() {
+        let alert = UIAlertController(title: "Filter", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Date Taken", style: .default, handler: { [weak self] _ in
+            self?.filter(by: .dateTaken)
+        }))
+        alert.addAction(UIAlertAction(title: "Date Published", style: .default, handler: { [weak self] _ in
+            self?.filter(by: .datePublished)
+        }))
+        present(alert, animated: true)
+    }
+
+    private func filter(by sortType: PhotoSortType) {
+        photoContainer = photoContainer?.sorted(by: sortType)
     }
 
     // MARK: Networking

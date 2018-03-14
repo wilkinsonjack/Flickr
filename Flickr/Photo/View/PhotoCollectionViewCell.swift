@@ -16,6 +16,8 @@ protocol PhotoCollectionViewCellDelegate: class {
 class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var dateTakenLabel: UILabel!
+    @IBOutlet weak var datePublishedLabel: UILabel!
 
     weak var delegate: PhotoCollectionViewCellDelegate?
 
@@ -25,7 +27,9 @@ class PhotoCollectionViewCell: UICollectionViewCell {
                 else { return }
 
             titleLabel.text = photo.title
-            photoImageView.sd_setImage(with: photo.media.m)
+            photoImageView.sd_setImage(with: photo.media.url)
+            dateTakenLabel.text = "Taken: \(DateFormatter.ddMMyyyy.string(from: photo.dateTaken))"
+            datePublishedLabel.text = "Published: \(DateFormatter.ddMMyyyyHHmm.string(from: photo.published))"
         }
     }
 
