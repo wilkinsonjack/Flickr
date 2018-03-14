@@ -1,7 +1,7 @@
 # Flickr App 
 [![Build Status](https://travis-ci.org/wilkinsonjack/Flickr.svg?branch=master)](https://travis-ci.org/wilkinsonjack/Flickr)
 
-##  Dependancies
+##  Dependencies
 **SDWebImage** I chose to use just the one third party library. The reason for this is it would've taken me a considerable amount of time to write an image caching library myself and would've taken time away from focussing on the requirements of the task. This library is one among others such as Kingfisher which I have used in the past and is one I am familiar with.
 
 ## Decisions
