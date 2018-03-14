@@ -9,12 +9,15 @@
 import UIKit
 
 extension PhotoCollectionViewController: PhotoCollectionViewCellDelegate {
-    func shareButtonDidTap(_ cell: PhotoCollectionViewCell) {
+    func shareButtonDidTap(_ cell: PhotoCollectionViewCell, button: UIButton) {
         guard let photo = cell.photo,
               let shareImage = cell.photoImageView.image
         else { return }
 
         let vc = UIActivityViewController(activityItems: [photo.shareMessage, shareImage], applicationActivities: [])
+        vc.popoverPresentationController?.sourceView = button
+        vc.popoverPresentationController?.sourceRect = button.bounds
+
         present(vc, animated: true)
     }
 }

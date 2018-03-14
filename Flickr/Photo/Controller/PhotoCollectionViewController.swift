@@ -51,14 +51,18 @@ class PhotoCollectionViewController: UICollectionViewController {
 
     // MARL: Filtering
 
-    @objc func filterTapped() {
+    @objc func filterTapped(sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Filter", message: nil, preferredStyle: .actionSheet)
+
         alert.addAction(UIAlertAction(title: "Date Taken", style: .default, handler: { [weak self] _ in
             self?.filter(by: .dateTaken)
         }))
         alert.addAction(UIAlertAction(title: "Date Published", style: .default, handler: { [weak self] _ in
             self?.filter(by: .datePublished)
         }))
+        
+        alert.popoverPresentationController?.barButtonItem = sender
+
         present(alert, animated: true)
     }
 

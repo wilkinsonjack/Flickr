@@ -10,7 +10,7 @@ import UIKit
 import SDWebImage
 
 protocol PhotoCollectionViewCellDelegate: class {
-    func shareButtonDidTap(_ cell: PhotoCollectionViewCell)
+    func shareButtonDidTap(_ cell: PhotoCollectionViewCell, button: UIButton)
 }
 
 class PhotoCollectionViewCell: UICollectionViewCell {
@@ -34,6 +34,6 @@ class PhotoCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func shareTapped(_ sender: UIButton) {
-        delegate?.shareButtonDidTap(self)
+        delegate?.shareButtonDidTap(self, button: sender)
     }
 }
