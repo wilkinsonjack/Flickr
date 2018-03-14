@@ -12,7 +12,7 @@ struct PhotoContainer: Codable {
     let title: String
     let link: URL
     let description: String
-    let modified: String
+    let modified: Date
     let generator: String
     let items: [Item]
 

@@ -38,7 +38,7 @@ class PhotoContainerTests: XCTestCase {
         let photoContainer = PhotoContainer(title: "Test",
                                             link: URL(string: "https://google.com")!,
                                             description: "Test",
-                                            modified: "Test",
+                                            modified: Date(timeIntervalSinceNow: 0),
                                             generator: "Test",
                                             items: items)
 
@@ -75,7 +75,7 @@ class PhotoContainerTests: XCTestCase {
         let photoContainer = PhotoContainer(title: "Test",
                                             link: URL(string: "https://google.com")!,
                                             description: "Test",
-                                            modified: "Test",
+                                            modified: Date(timeIntervalSinceNow: 0),
                                             generator: "Test",
                                             items: items)
 
