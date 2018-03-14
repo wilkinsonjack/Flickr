@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 enum PhotoSortType {
     case dateTaken
@@ -25,6 +26,7 @@ class PhotoCollectionViewController: UICollectionViewController {
     var photoContainer: PhotoContainer? {
         didSet {
             title = photoContainer?.title
+
             collectionView?.reloadData()
         }
     }
@@ -110,6 +112,16 @@ class PhotoCollectionViewController: UICollectionViewController {
         cell.delegate = self
 
         return cell
+    }
+
+    // MARK:- UICollectionViewDelegate
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let photo = photoContainer?.items[indexPath.item]
+            else { return }
+
+        let svc = SFSafariViewController(url: photo.link)
+        self.present(svc, animated: true, completion: nil)
     }
 
     // MARK:- UICollectionViewFlowLayout
