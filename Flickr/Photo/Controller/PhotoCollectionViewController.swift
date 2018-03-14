@@ -16,6 +16,12 @@ enum PhotoSortType {
 class PhotoCollectionViewController: UICollectionViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 
+    let refreshControl: UIRefreshControl = {
+        let control = UIRefreshControl()
+        control.addTarget(self, action: #selector(fetchPhotos), for: .valueChanged)
+        return control
+    }()
+
     var photoContainer: PhotoContainer? {
         didSet {
             title = photoContainer?.title
@@ -31,6 +37,7 @@ class PhotoCollectionViewController: UICollectionViewController {
         let barButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "sort"), style: .plain, target: self, action: #selector(filterTapped))
         navigationItem.rightBarButtonItem = barButtonItem
 
+        collectionView?.refreshControl = refreshControl
         fetchPhotos()
     }
 
@@ -59,7 +66,7 @@ class PhotoCollectionViewController: UICollectionViewController {
 
     // MARK: Networking
 
-    private func fetchPhotos() {
+    @objc private func fetchPhotos() {
         loadingIndicator.startAnimating()
 
         PhotoService.fetch { [weak self] result in
@@ -70,7 +77,7 @@ class PhotoCollectionViewController: UICollectionViewController {
                 case .failure(_):
                     self?.presentErrorAlert()
                 }
-
+                self?.collectionView?.refreshControl?.endRefreshing()
                 self?.loadingIndicator.stopAnimating()
             }
         }
