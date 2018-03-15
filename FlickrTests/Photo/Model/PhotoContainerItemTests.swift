@@ -10,16 +10,10 @@ import XCTest
 @testable import Flickr
 
 class PhotoContainerItemTests: XCTestCase {
-    private let decoder: JSONDecoder = {
-        let d = JSONDecoder()
-        d.dateDecodingStrategy = .iso8601
-        return d
-    }()
-
     func testSharedFromReturnsValidUsername() {
         guard let filePath = Bundle(for: type(of: self)).path(forResource: "PhotoItemResponseSuccess", ofType: "json"),
               let data = try? Data(contentsOf: URL(fileURLWithPath: filePath)),
-              let item = try? decoder.decode(PhotoContainer.Item.self, from: data)
+              let item = try? JSONDecoder.iso6801.decode(PhotoContainer.Item.self, from: data)
         else {
             XCTFail("😒 PhotoContainer.Item was not decoded from JSON")
             return
@@ -32,7 +26,7 @@ class PhotoContainerItemTests: XCTestCase {
     func testSharedFromReturnsDefaultString() {
         guard let filePath = Bundle(for: type(of: self)).path(forResource: "PhotoItemResponseMalformed", ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: filePath)),
-            let item = try? decoder.decode(PhotoContainer.Item.self, from: data)
+            let item = try? JSONDecoder.iso6801.decode(PhotoContainer.Item.self, from: data)
         else {
             XCTFail("😒 PhotoContainer.Item was not decoded from JSON")
             return

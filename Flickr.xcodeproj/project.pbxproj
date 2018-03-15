@@ -29,6 +29,7 @@
 		0494AC5C2059333F001E6DC1 /* DateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494AC5B2059333F001E6DC1 /* DateFormatterTests.swift */; };
 		0494AC6020593605001E6DC1 /* PhotoContainer+Sorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494AC5F20593605001E6DC1 /* PhotoContainer+Sorting.swift */; };
 		0494AC6220593722001E6DC1 /* PhotoContainerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0494AC6120593722001E6DC1 /* PhotoContainerTests.swift */; };
+		04F9B43F205AF1DA002C49F4 /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F9B43E205AF1DA002C49F4 /* JSONDecoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0494AC5B2059333F001E6DC1 /* DateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterTests.swift; sourceTree = "<group>"; };
 		0494AC5F20593605001E6DC1 /* PhotoContainer+Sorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhotoContainer+Sorting.swift"; sourceTree = "<group>"; };
 		0494AC6120593722001E6DC1 /* PhotoContainerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoContainerTests.swift; sourceTree = "<group>"; };
+		04F9B43E205AF1DA002C49F4 /* JSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			children = (
 				0416A5D3205881C10052A58F /* String.swift */,
 				0494AC58205932D0001E6DC1 /* DateFormatter.swift */,
+				04F9B43E205AF1DA002C49F4 /* JSONDecoder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F9B43F205AF1DA002C49F4 /* JSONDecoder.swift in Sources */,
 				0416A5CF2058632A0052A58F /* RoundedUIImageView.swift in Sources */,
 				04411336205849A4008889CD /* PhotoService.swift in Sources */,
 				0416A5D1205871110052A58F /* PhotoCollectionViewController+PhotoCollectionViewCellDelegate.swift in Sources */,
