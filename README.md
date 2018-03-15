@@ -24,5 +24,6 @@
 - Share
 - Image caching (via SDWebImage)
 - Open in browser
+- Save image to Camera Roll
 - Ordering by date taken or date published
 
