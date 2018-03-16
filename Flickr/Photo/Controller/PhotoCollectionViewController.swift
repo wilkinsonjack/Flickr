@@ -80,8 +80,8 @@ class PhotoCollectionViewController: UICollectionViewController {
                 switch result {
                 case .success(let photoContainer):
                     self?.photoContainer = photoContainer
-                case .failure(_):
-                    self?.presentErrorAlert()
+                case .failure(let error):
+                    self?.presentErrorAlert(for: error)
                 }
                 self?.collectionView?.refreshControl?.endRefreshing()
                 self?.loadingIndicator.stopAnimating()
@@ -89,8 +89,8 @@ class PhotoCollectionViewController: UICollectionViewController {
         }
     }
 
-    private func presentErrorAlert() {
-        let alert = UIAlertController(title: "Oops", message: "Some thing has gone wrong", preferredStyle: .alert)
+    private func presentErrorAlert(for error: PhotoService.ServiceError) {
+        let alert = UIAlertController(title: "Oops", message: error.prettyError, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Try Again?", style: .default, handler: { [weak self] _ in
             self?.fetchPhotos()
         }))

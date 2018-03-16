@@ -10,7 +10,12 @@ import Foundation
 
 struct PhotoService {
     enum ServiceError {
+        case serviceError
         case jsonDecodingError
+
+        var prettyError: String {
+            return "Some thing has gone wrong"
+        }
     }
 
     enum PhotoResult {
@@ -23,6 +28,9 @@ struct PhotoService {
     static func fetch(handle: @escaping (PhotoResult) -> ()) {
         let url = URL(string: "https://api.flickr.com/services/feeds/photos_public.gne?format=json&nojsoncallback=1")!
         session.request(url: url) { data, response, error in
+            guard error == nil
+                else { return handle(.failure(.serviceError)) }
+
             guard let data = data,
                   let photoContainer = try? JSONDecoder.iso6801.decode(PhotoContainer.self, from: data)
             else { return handle(.failure(.jsonDecodingError)) }
