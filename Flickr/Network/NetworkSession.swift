@@ -9,15 +9,15 @@
 import Foundation
 
 class NetworkSession {
-    public let session: URLSession = .shared
+    let session: URLSession = .shared
 
     #if DEBUG
 
-    public var mockData: Data?
-    public var mockResponse: URLResponse?
-    public var mockError: Error?
+    var mockData: Data?
+    var mockResponse: URLResponse?
+    var mockError: Error?
 
-    public var willRequest: ((URL) -> ())?
+    var willRequest: ((URL) -> ())?
 
     func request(url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         willRequest?(url)
